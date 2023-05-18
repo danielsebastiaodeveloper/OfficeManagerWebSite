@@ -1,0 +1,41 @@
+@use "src/shared/variables" as m;
+
+.form{
+    &-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.8rem;
+    }
+
+    &-btn{
+        width: 100%;
+        border: none;
+        height: 2.5rem;
+        background: m.$eviden-primary;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        color: white;
+        transition: all 0.2s;
+
+        &:hover{
+            background: m.$eviden-orange;
+        }
+    }
+
+    &-input{
+        height: 40px;
+        padding-inline: 10px;
+        border: 1px solid black;
+        transition: all 250ms;
+
+        &:hover{
+            border: 1px solid black;
+        }
+
+        &:focus{
+            outline: none;
+            border: 1px solid m.$eviden-primary;
+            box-shadow: 0 0 5px 2px m.$eviden-primary;
+        }
+    }
+}

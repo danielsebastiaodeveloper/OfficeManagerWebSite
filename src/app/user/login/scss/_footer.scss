@@ -1,0 +1,13 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    margin-block: 18px;
+    width: 80%;
+    margin-inline: auto;
+
+    &-text{
+        color: black;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}

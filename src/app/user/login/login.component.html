@@ -1,0 +1,41 @@
+<main>
+    <section class="login">
+        <article class="login__head">
+            <div class="login__head-icon">
+                <div class="icon__top"></div>
+                <div class="icon__bottom">
+                    <div class="icon__bottom-line"></div>
+                </div>
+            </div>
+            <div class="login__head-title"><span class="bold">Office</span> Manager</div>
+        </article>
+        <article class="login__content">
+            <div class="content__text">
+                <div class="content__text-title">Login</div>
+            </div>
+            <form class="content__form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-input" id="email" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-input" id="password" formControlName="password">
+                </div>
+                <button type="submit" class="form-btn" [disabled]="!loginForm.controls['terms'].value">Log In</button>
+                <section class="footer">
+                    <label class="checkbox">
+                        <input type="checkbox" formControlName="terms">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="footer-text">
+                        I accept company's 
+                        <span class="important">Terms of Use</span>  
+                        and 
+                        <span class="important">Privacy Policy</span>
+                    </div>
+                </section>
+            </form>
+        </article>
+    </section>
+</main>

@@ -1,0 +1,52 @@
+@use "src/shared/variables" as m;
+
+.checkbox{
+    display: block;
+    position: relative;
+    padding-inline: 10px;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    height: 15px;
+
+    input{
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    .checkmark{
+        position: absolute;
+        top: 5%;
+        left: 12%;
+        height: 15px;
+        width: 15px;
+        background-color: m.$eviden-white;
+        border: 1px solid m.$eviden-primary;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover{
+            box-shadow: 0 0 1px 1px m.$eviden-primary;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 5px;
+            top: 0;
+            width: 5px;
+            height: 10px;
+            border: solid m.$eviden-primary;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    }
+}
