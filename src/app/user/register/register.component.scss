@@ -1,0 +1,31 @@
+@import 'scss/head', 'scss/register', 'src/shared/form', 'src/shared/footer', 'src/shared/checkbox';
+
+main {
+    background-image: url('/assets/backgroundEviden.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container{
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.login {
+    font-size: 0.9rem;
+
+    &__span{
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .register{
+        padding: 30px 20px;
+    }
+}
