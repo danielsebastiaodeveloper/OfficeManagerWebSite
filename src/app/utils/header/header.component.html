@@ -1,0 +1,23 @@
+<main>
+    <section class="logo">
+        <img src="../../../assets/logo-Eviden.png" alt="">
+    </section>
+    <section class="content">
+        <article class="content__left">
+            <div class="text">Welcome to:</div>
+            <div class="text bold">{{ company }} Office Manager</div>
+        </article>
+        <article class="content__right">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1" class="text">Please select a location:</label>
+                <select class="form-control custom-select`" id="exampleFormControlSelect1">
+                    <option selected disabled>Select your site...</option>
+                    <option *ngFor="let branch of branches" value="">{{ branch.location }} - {{ branch.branch }}</option>
+                </select>
+              </div>
+        </article>
+    </section>
+    <section class="user">
+        <i class="fa-solid fa-user"></i>
+    </section>
+</main>

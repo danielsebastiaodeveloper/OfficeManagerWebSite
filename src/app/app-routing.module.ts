@@ -9,6 +9,7 @@ import { ConfirmationComponent } from './user/confirmation/confirmation.componen
 import { RegisterDataComponent } from './user/register-data/register-data.component';
 import { VerificationComponent } from './user/verification/verification.component';
 import { VerificationCodeComponent } from './user/verification-code/verification-code.component';
+import { DashboardComponent } from './reservations/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
   },
   {
     path: '',
+    component: DashboardComponent
+  },
+  {
+    path: '**',
     redirectTo: 'login',
     pathMatch: 'full' 
   },

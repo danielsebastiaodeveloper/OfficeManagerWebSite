@@ -14,6 +14,9 @@ import { ConfirmationComponent } from './user/confirmation/confirmation.componen
 import { RegisterDataComponent } from './user/register-data/register-data.component';
 import { VerificationComponent } from './user/verification/verification.component';
 import { VerificationCodeComponent } from './user/verification-code/verification-code.component';
+import { HeaderComponent } from './utils/header/header.component';
+import { FooterComponent } from './utils/footer/footer.component';
+import { DashboardComponent } from './reservations/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { VerificationCodeComponent } from './user/verification-code/verification
     ConfirmationComponent,
     RegisterDataComponent,
     VerificationComponent,
-    VerificationCodeComponent
+    VerificationCodeComponent,
+    HeaderComponent,
+    FooterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

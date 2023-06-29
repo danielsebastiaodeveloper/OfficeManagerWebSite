@@ -1,0 +1,33 @@
+@use "src/shared/variables" as m;
+
+.content{
+    height: 100%;
+    margin-block: auto;
+    display: flex;
+    flex-direction: row;
+
+    &__left{
+        position: relative;
+
+        &::after{
+            content: '';
+            width: 3px;
+            height: 35px;
+            background: #000;
+            position: absolute;
+            right: -10%;
+            transform: translateY(-100%);
+        }
+    }
+    &__right{
+        margin-left: 40px;
+
+        select{
+            border: 1px solid m.$eviden-primary;
+
+            &:focus{
+                box-shadow: 0 0 5px 3px m.$eviden-primary;
+            }
+        }
+    }
+}
