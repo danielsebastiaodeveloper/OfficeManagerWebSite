@@ -13,7 +13,7 @@ interface IndexReturn {
 })
 export class AppComponent{
   title = 'eviden_office';
-  activeHeader = false;
+  activeUtils = false;
 
   prohibitedRoutes: IndexReturn = {
     '/login': false,
@@ -31,9 +31,9 @@ export class AppComponent{
     _router.events.pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd ),
     map(() => {
       if(this.prohibitedRoutes[this._router.url] == false){
-        this.activeHeader = false;
+        this.activeUtils = false;
       } else{
-        this.activeHeader = true;
+        this.activeUtils = true;
       }
     })
     ).subscribe();
