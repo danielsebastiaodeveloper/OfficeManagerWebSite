@@ -10,6 +10,7 @@ import { RegisterDataComponent } from './user/register-data/register-data.compon
 import { VerificationComponent } from './user/verification/verification.component';
 import { VerificationCodeComponent } from './user/verification-code/verification-code.component';
 import { DashboardComponent } from './reservations/dashboard/dashboard.component';
+import { FilterComponent } from './reservations/filter/filter.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,12 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent
   },
+  //Child Components Test Environment
+  {
+    path: 'xyz',
+    component: FilterComponent
+  },
+  //----------------------------------
   {
     path: '**',
     redirectTo: 'login',

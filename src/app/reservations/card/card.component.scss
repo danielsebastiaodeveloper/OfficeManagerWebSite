@@ -1,0 +1,37 @@
+@use "src/shared/variables" as m;
+
+.accommodations{
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.form-btn{
+    width: 100%;
+    border: none;
+    height: 2.5rem;
+    background: m.$eviden-primary;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+    transition: all 0.2s;
+
+    &:hover{
+        background: m.$eviden-orange;
+    }
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carousel-item > img {
+    object-fit: cover;
+    width: 100%;
+    height: 160px;
+  }
+
+main{
+    height: 540px;
+}

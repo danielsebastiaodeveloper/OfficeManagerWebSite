@@ -3,6 +3,7 @@
         <img src="assets/backgroundEviden.jpg" alt="">
         <article class="content__image-text">Expanding the possibilities of data and technology</article>
     </section>
+    <!-- Filter component goes here -->
     <section class="row content__info">
         <article class="col-7 content__info-text">
             <div class="title">Office Details</div>
@@ -11,5 +12,14 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto suscipit tempore rerum quaerat sequi cupiditate non debitis. Dolore distinctio sint minima aperiam eum iste illum, sed iure pariatur, iusto voluptatum reprehenderit veniam at unde facere mollitia, blanditiis corporis delectus magni exercitationem doloremque rem laborum voluptatem provident. Optio perspiciatis repellat dolor!
         </article>
         <article class="col-5"></article>
+    </section>
+    <div class="title col-12">Spaces and Rooms to work at Eviden</div>
+    <section class="row gridview">
+        <app-card
+            class="col-xl-3 col-lg-4 col-md-6 col-sm-12 gridview__item"
+            *ngFor="let room of rooms; index as i"
+            [room]="room"
+            [item]="i">
+        </app-card>
     </section>
 </main>

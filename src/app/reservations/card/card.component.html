@@ -1,0 +1,31 @@
+<main class="card" style="width: 100%;">
+    <!-- carousel -->
+    <section [id]="'rooms' + item" class="carousel slide carousel-fade">
+        <article class="carousel-inner">
+            <div 
+                class="carousel-item" 
+                *ngFor="let image of room.images; index as i" 
+                [class.active]="i == 0">
+                <img class="d-block w-100 banner" [src]="image" alt="">
+            </div>
+        </article>
+        <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#rooms'+item" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#rooms'+item" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </section>
+    <!-- content -->
+    <section class="card-body">
+        <h3 class="card-title">{{ room.name }}</h3>
+        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, architecto.</p>
+        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, dolorum.</p>
+        <ul class="accommodations">
+            <li *ngFor="let item of room.accommodations">{{ item }}</li>
+        </ul>
+        <button class="form-btn">BOOK NOW</button>
+    </section>
+</main>

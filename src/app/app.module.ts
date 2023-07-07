@@ -17,6 +17,8 @@ import { VerificationCodeComponent } from './user/verification-code/verification
 import { HeaderComponent } from './utils/header/header.component';
 import { FooterComponent } from './utils/footer/footer.component';
 import { DashboardComponent } from './reservations/dashboard/dashboard.component';
+import { CardComponent } from './reservations/card/card.component';
+import { FilterComponent } from './reservations/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { DashboardComponent } from './reservations/dashboard/dashboard.component
     VerificationCodeComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    CardComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
