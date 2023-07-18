@@ -19,6 +19,7 @@ import { FooterComponent } from './utils/footer/footer.component';
 import { DashboardComponent } from './reservations/dashboard/dashboard.component';
 import { CardComponent } from './reservations/card/card.component';
 import { FilterComponent } from './reservations/filter/filter.component';
+import { SearchCardComponent } from './reservations/search-card/search-card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FilterComponent } from './reservations/filter/filter.component';
     FooterComponent,
     DashboardComponent,
     CardComponent,
-    FilterComponent
+    FilterComponent,
+    SearchCardComponent
   ],
   imports: [
     BrowserModule,

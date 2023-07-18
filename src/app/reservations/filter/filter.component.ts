@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent {
+  spaces = ['Single Space', 'Double Space', 'Space Odditty', 'Supercalifragilisticoespiralidoso']
 
+  doNothing(){
+
+  }
 }

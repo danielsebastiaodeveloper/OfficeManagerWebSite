@@ -1,0 +1,98 @@
+.mobile{
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: none;
+    flex-direction: column;
+
+    .menu{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        transition: height 0.5s;
+
+        .button{
+            display: grid;
+            place-items: center;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            
+            .burger{
+                width: 30px;
+                height: 4px;
+                background: black;
+                border-radius: 5px;
+                position: relative;
+                transition: all 0.5s;
+        
+                &::before{
+                    content: '';
+                    width: 30px;
+                    height: 4px;
+                    background: black;
+                    border-radius: 5px;
+                    position: absolute;
+                    translate: 0 -9px;
+                    transition: all 0.5s;
+                }
+        
+                &::after{
+                    content: '';
+                    width: 30px;
+                    height: 4px;
+                    background: black;
+                    border-radius: 5px;
+                    position: absolute;
+                    translate: 0 9px;
+                    transition: all 0.5s;
+                }
+            }
+
+            .close{
+                background: none !important;
+                transition: all 0.5s;
+            
+                &::before{
+                    transform: rotate(40deg);
+                    transform-origin: top left;
+                    transition: all 0.5s;
+                }
+            
+                &::after{
+                    transform: rotate(-40deg);
+                    transform-origin: bottom left;
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+}
+
+.open{
+    max-height: 300px !important;
+}
+
+.items{
+    transition: max-height 1.3s;
+    overflow: hidden;
+    max-height: 0;
+
+    .item{
+        text-align: center;
+        width: 100%;
+        padding: 10px 30px;
+        font-size: 1.3rem;
+    }
+
+    .account{
+        transition: all 1s;
+        cursor: pointer;
+        margin-bottom: 20px;
+
+        &:hover{
+            background: lightgray;
+        }
+    }
+}

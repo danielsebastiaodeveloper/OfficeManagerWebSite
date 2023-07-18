@@ -1,22 +1,23 @@
-@import 'scss/logo', 'scss/content', 'scss/user';
+@import 'scss/logo', 'scss/content', 'scss/user', 'scss/mobile', 'scss/utils';
 
 main{
+    overflow: hidden;
+}
+
+.web{
     height: 100%;
-    width: 100%;
+    // width: 100vw;
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid lightgray;
 }
 
-.text{
-    margin-block: 5px;
-}
+@media screen and (max-width: 880px) {
+    .web{
+        display: none;
+    }
 
-.bold{
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.custom-select{
-    width: 300px;
+    .mobile{
+        display: flex;
+    }
 }

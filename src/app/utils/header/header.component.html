@@ -1,23 +1,42 @@
 <main>
-    <section class="logo">
-        <img src="../../../assets/logo-Eviden.png" alt="">
-    </section>
-    <section class="content">
-        <article class="content__left">
-            <div class="text">Welcome to:</div>
-            <div class="text bold">{{ company }} Office Manager</div>
+    <section class="web">
+        <article class="logo">
+            <img src="../../../assets/logo-Eviden.png" alt="">
         </article>
-        <article class="content__right">
-            <div class="form-group">
+        <article class="content">
+            <div class="content__left">
+                <div class="text">Welcome to:</div>
+                <div class="text bold">{{ company }} Office Manager</div>
+            </div>
+            <div class="content__right">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1" class="text">Please select a location:</label>
+                    <select class="form-control custom-select`" id="exampleFormControlSelect1">
+                        <option selected disabled>Select your site...</option>
+                        <option *ngFor="let branch of branches" value="">{{ branch.location }} - {{ branch.branch }}</option>
+                    </select>
+                  </div>
+            </div>
+        </article>
+        <article class="user">
+            <i class="fa-solid fa-user"></i>
+        </article>
+    </section>
+    <section class="mobile">
+        <article class="menu">
+            <div class="button" (click)="toggleMenu()">
+                <div class="burger"></div>
+            </div>
+        </article>
+        <article class="items">
+            <div class="form-group item">
                 <label for="exampleFormControlSelect1" class="text">Please select a location:</label>
                 <select class="form-control custom-select`" id="exampleFormControlSelect1">
                     <option selected disabled>Select your site...</option>
                     <option *ngFor="let branch of branches" value="">{{ branch.location }} - {{ branch.branch }}</option>
                 </select>
-              </div>
+            </div>
+            <div class="item account">My Account</div>
         </article>
-    </section>
-    <section class="user">
-        <i class="fa-solid fa-user"></i>
     </section>
 </main>

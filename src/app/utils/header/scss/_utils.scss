@@ -1,0 +1,23 @@
+@use "src/shared/variables" as m;
+
+.text{
+    margin-block: 5px;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.custom-select{
+    width: 300px;
+}
+
+select{
+    border: 1px solid m.$eviden-primary;
+    
+    &:focus{
+        border: 1px solid m.$eviden-primary;
+        box-shadow: 0 0 5px 1px m.$eviden-primary;
+    }
+}

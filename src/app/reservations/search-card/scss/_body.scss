@@ -1,0 +1,17 @@
+.body{
+    .left{
+        border-right: 1px solid black;
+        display: flex;
+        flex-direction: column;
+
+        &__image{
+            width: 100%;
+
+            img{
+                width: 100%;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+            }
+        }
+    }
+}

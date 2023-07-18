@@ -11,6 +11,7 @@ import { VerificationComponent } from './user/verification/verification.componen
 import { VerificationCodeComponent } from './user/verification-code/verification-code.component';
 import { DashboardComponent } from './reservations/dashboard/dashboard.component';
 import { FilterComponent } from './reservations/filter/filter.component';
+import { SearchCardComponent } from './reservations/search-card/search-card.component';
 
 const routes: Routes = [
   {
@@ -56,7 +57,7 @@ const routes: Routes = [
   //Child Components Test Environment
   {
     path: 'xyz',
-    component: FilterComponent
+    component: SearchCardComponent
   },
   //----------------------------------
   {

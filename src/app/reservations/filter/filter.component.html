@@ -1,1 +1,26 @@
-<p>filter works!</p>
+<main class="filter">
+    <article class="filter__title"><b>Book</b> your space for Eviden at TORRE MAPFRE</article>
+    <form class="filter__params" (ngSubmit)="doNothing()">
+        <article class="form-group">
+            <label for="space" style="font-size: 0.9rem;">Space:</label>
+            <select class="form-input" id="space">
+                <option 
+                *ngFor="let space of spaces"
+                value="">{{ space }}</option>
+            </select>
+        </article>
+        <article class="form-group">
+            <label for="date" style="font-size: 0.9rem;">Date:</label>
+            <input type="date" class="form-input" id="date">
+        </article>
+        <article class="form-group">
+            <label for="timeFrom" style="font-size: 0.9rem;">Time From:</label>
+            <input type="time" class="form-input" id="timeFrom">
+        </article>
+        <article class="form-group">
+            <label for="timeUntil" style="font-size: 0.9rem;">Time Until:</label>
+            <input type="time" class="form-input" id="timeUntil">
+        </article>
+        <div class="form-btn" >Search</div>
+    </form>
+</main>

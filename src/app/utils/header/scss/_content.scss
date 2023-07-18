@@ -1,11 +1,9 @@
-@use "src/shared/variables" as m;
-
 .content{
     height: 100%;
     margin-block: auto;
     display: flex;
     flex-direction: row;
-    margin-right: 10px;
+    margin-right: 15px;
 
     &__left{
         position: relative;
@@ -22,13 +20,5 @@
     }
     &__right{
         margin-left: 40px;
-
-        select{
-            border: 1px solid m.$eviden-primary;
-
-            &:focus{
-                box-shadow: 0 0 5px 3px m.$eviden-primary;
-            }
-        }
     }
 }
